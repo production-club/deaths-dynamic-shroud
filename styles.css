@@ -189,6 +189,9 @@ body {
   .smcontainer {
     justify-content: center;
   }
+  .title {
+    line-height: 1;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
