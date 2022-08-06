@@ -5,12 +5,12 @@ html {
 body {
   padding: 0;
   background-color: black;
-  display: flex;
+  display: block;
   align-items: center;
 }
 .container {
   margin: auto;
-  max-width: 1550px;
+  max-width: 1250px;
   padding: 0 1rem;
 }
 
@@ -44,6 +44,9 @@ body {
   letter-spacing: 1ch;
   transition: text-shadow 0.5s;
 }
+.mainImg {
+  width: 80%;
+}
 .imgcontainer {
   display: block;
   text-align: center;
@@ -58,14 +61,18 @@ body {
   letter-spacing: 0.2rem;
   margin-bottom: 1.5rem;
 }
-.imgcontainer img {
-  width: 100%;
-}
+
 .singlecontainer {
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin-bottom: 4rem;
+}
+.singleimgwrapper {
+  width: 50%;
+}
+.singleimgwrapper img {
+  width: 100%;
 }
 .singlecontainer p {
   font-family: "Times New Roman", Times, serif;
@@ -73,9 +80,7 @@ body {
   padding: 0;
   margin: 0;
 }
-.singlecontainer img {
-  width: 50%;
-}
+
 .imgcontainer a {
   letter-spacing: 0.2rem;
   font-size: 1.2rem;
@@ -83,14 +88,29 @@ body {
 }
 .streamlinkWrapper {
   color: white;
-}
-.streamlink {
-  width: auto%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
 }
-.streamliknk img {
-  width: 70%;
+.streaminnerwrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.streamlink {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-items: left;
+  align-items: flex-start;
+  margin-left: 5rem;
+}
+.streamlink img {
+  width: 20%;
 }
 .imgcontainer a:hover {
   text-shadow: 1px 1px 10px white;
@@ -115,7 +135,10 @@ body {
 .footer a {
 }
 .smImage {
-  width: 7%;
+  width: 100%;
+}
+.smlink {
+  width: auto;
 }
 
 .title {
@@ -148,12 +171,24 @@ body {
 
 .smcontainer {
   width: 98%;
+  display: flex;
+  justify-content: left;
 }
 .smcontainer a {
   text-decoration: none;
+  display: flex;
+  padding: 1rem;
+  max-width: 50px;
+  max-height: 50px;
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
+  .streamlink img {
+    width: 50%;
+  }
+  .smcontainer {
+    justify-content: center;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
